@@ -1,11 +1,521 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🕊️ Inventario y Autoevaluación Grupal de A.A.</title>
+    <link rel="stylesheet" href="MarthaInesL.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header class="header">
+            <h1>🕊️ Inventario y Autoevaluación Grupal de A.A.</h1>
+            <p class="subtitle">Basado en el folleto "La Tradición de A.A. Cómo se desarrolló"</p>
+        </header>
+
+        <form class="evaluation-form" id="evaluationForm">
+            
+            <!-- Información del Participante -->
+            <section class="form-section">
+                <h2>Información del Participante</h2>
+                
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Fecha de la Evaluación:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña de Acceso:</label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña segura" required>
+                </div>
+            </section>
+
+            <!-- I. Unidad y Bienestar Común -->
+            <section class="form-section">
+                <h2>I. Unidad y Bienestar Común</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Estamos recordando que el bienestar común del grupo debe tener prioridad sobre los intereses personales?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q1" value="si" required>
+                            <span>Sí, completamente</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q1" value="parcial">
+                            <span>Parcialmente</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q1" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Hemos permitido que las diferencias personales o resentimientos debiliten los lazos que nos unen como A.A.?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q2" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q2" value="parcial">
+                            <span>En ocasiones</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q2" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Nuestras reuniones reflejan espíritu de comprensión, humildad y serenidad, o se sienten tensas y defensivas?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q3" value="si" required>
+                            <span>Espíritu positivo</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q3" value="parcial">
+                            <span>Mixto</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q3" value="no">
+                            <span>Tensas y defensivas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Nos estamos esforzando en "mantenernos unificados" como el libro enseña, o estamos buscando tener la razón?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q4" value="si" required>
+                            <span>Buscamos unificación</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q4" value="parcial">
+                            <span>A veces cedemos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q4" value="no">
+                            <span>Buscamos tener razón</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Reconocemos que la unidad de A.A. no se conserva mecánicamente, sino con esfuerzo espiritual constante?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q5" value="si" required>
+                            <span>Sí, lo reconocemos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q5" value="parcial">
+                            <span>A veces</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q5" value="no">
+                            <span>No lo hemos considerado</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- II. Autoridad Espiritual y Servicio -->
+            <section class="form-section">
+                <h2>II. Autoridad Espiritual y Servicio</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Recordamos que la autoridad fundamental es un Dios amoroso tal como se exprese en la conciencia del grupo, y no una persona o facción?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q6" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q6" value="parcial">
+                            <span>Parcialmente</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q6" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Nuestras decisiones reflejan la conciencia del grupo o los deseos de unos pocos?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q7" value="si" required>
+                            <span>Conciencia del grupo</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q7" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q7" value="no">
+                            <span>Deseos de unos pocos</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Nuestros líderes actúan como servidores de confianza o intentan gobernar?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q8" value="si" required>
+                            <span>Servidores de confianza</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q8" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q8" value="no">
+                            <span>Intentan gobernar</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- III. Pertenencia y Aceptación -->
+            <section class="form-section">
+                <h2>III. Pertenencia y Aceptación</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Hemos excluido o juzgado a algún miembro por recaídas, carácter, ideas o diferencias personales?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q9" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q9" value="parcial">
+                            <span>En ocasiones</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q9" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Estamos dispuestos a recibir con amor incluso a quienes nos resultan difíciles o incómodos?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q10" value="si" required>
+                            <span>Sí, siempre</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q10" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q10" value="no">
+                            <span>Con dificultad</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Creemos verdaderamente que "el único requisito para ser miembro es querer dejar de beber"?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q11" value="si" required>
+                            <span>Sí, creemos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q11" value="parcial">
+                            <span>Mayormente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q11" value="no">
+                            <span>Tenemos dudas</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IV. Amor y Tolerancia -->
+            <section class="form-section">
+                <h2>IV. Amor y Tolerancia</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Practicamos la paciencia y la tolerancia con los compañeros que atraviesan momentos difíciles?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q12" value="si" required>
+                            <span>Sí, siempre</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q12" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q12" value="no">
+                            <span>No siempre</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Hemos participado en chismes, críticas o juicios disfrazados de "preocupación por el grupo"?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q13" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q13" value="parcial">
+                            <span>En ocasiones</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q13" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Recordamos que quienes más nos irritan pueden ser nuestros maestros espirituales?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q14" value="si" required>
+                            <span>Sí, lo recordamos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q14" value="parcial">
+                            <span>A veces</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q14" value="no">
+                            <span>No lo consideramos</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- V. Dinero, Propiedad y Poder -->
+            <section class="form-section">
+                <h2>V. Dinero, Propiedad y Poder</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Estamos permitiendo que los temas de dinero, posición o prestigio nos dividan?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q15" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q15" value="parcial">
+                            <span>En ocasiones</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q15" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Estamos recordando que los bienes materiales deben estar al servicio de lo espiritual y no al revés?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q16" value="si" required>
+                            <span>Sí, lo recordamos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q16" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q16" value="no">
+                            <span>No siempre</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Confiamos en el automantenimiento del grupo o buscamos influencias externas?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q17" value="si" required>
+                            <span>Automantenimiento</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q17" value="parcial">
+                            <span>Mayormente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q17" value="no">
+                            <span>Influencias externas</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VI. Anonimato y Humildad -->
+            <section class="form-section">
+                <h2>VI. Anonimato y Humildad</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Anteponemos los principios a las personalidades?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q18" value="si" required>
+                            <span>Sí, siempre</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q18" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q18" value="no">
+                            <span>No siempre</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Nos hemos dejado llevar por la necesidad de reconocimiento, poder o "tener la razón"?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q19" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q19" value="parcial">
+                            <span>En ocasiones</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q19" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Practicamos el anonimato espiritual dentro del grupo —renunciando al ego y reconociendo que todos somos iguales en sobriedad?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q20" value="si" required>
+                            <span>Sí, lo practicamos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q20" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q20" value="no">
+                            <span>Nos cuesta trabajo</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VII. Restauración del Espíritu de Unidad -->
+            <section class="form-section">
+                <h2>VII. Restauración del Espíritu de Unidad</h2>
+
+                <div class="question-group">
+                    <p class="question-text">¿Estamos actuando con humildad, comprensión y buena voluntad, o con miedo, orgullo y juicio?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q21" value="si" required>
+                            <span>Humildad y comprensión</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q21" value="parcial">
+                            <span>Mixto</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q21" value="no">
+                            <span>Miedo, orgullo y juicio</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Podemos recordar que "nadie inventó A.A.; brotó", y que no necesitamos controlar su desarrollo?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q22" value="si" required>
+                            <span>Sí, lo recordamos</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q22" value="parcial">
+                            <span>A veces</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q22" value="no">
+                            <span>No lo recordamos</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <p class="question-text">¿Estamos dispuestos a perdonarnos mutuamente y a comenzar de nuevo, guiados por el amor y el servicio?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="q23" value="si" required>
+                            <span>Sí, siempre</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q23" value="parcial">
+                            <span>Generalmente sí</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="q23" value="no">
+                            <span>Con dificultad</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comentarios Adicionales -->
+            <section class="form-section">
+                <h2>Comentarios Adicionales</h2>
+
+                <div class="form-group">
+                    <label for="comments">Reflexiones Personales o Grupales:</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Comparte tus reflexiones..."></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required>
+                        <span>Certifico que he respondido estas preguntas con honestidad y reflexión espiritual</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Botón Submit -->
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">📤 Enviar Evaluación</button>
+                <button type="reset" class="btn-reset">🔄 Limpiar Formulario</button>
+            </div>
+        </form>
+
+        <footer class="footer">
+            <p>🕊️ "Que el espíritu de A.A. nos guíe siempre hacia la unidad, el servicio y el amor"</p>
+        </footer>
+    </div>
 </body>
 </html>

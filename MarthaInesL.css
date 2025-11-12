@@ -1,0 +1,615 @@
+/* ============================================
+   ESTILOS GENERALES Y VARIABLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores alegres y armoniosos */
+    --primary-color: #FF6B9D;      /* Rosa vibrante */
+    --secondary-color: #FFD93D;    /* Amarillo alegre */
+    --accent-color: #6BCB77;       /* Verde fresco */
+    --light-purple: #C78BFF;       /* Púrpura suave */
+    --light-blue: #4D96FF;         /* Azul brillante */
+    --background: #F8F9FA;         /* Gris muy claro */
+    --white: #FFFFFF;              /* Blanco */
+    --text-dark: #2C3E50;          /* Gris oscuro para texto */
+    --text-light: #666666;         /* Gris para texto secundario */
+    --border-color: #E0E0E0;       /* Gris para bordes */
+    
+    /* Tipografía */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-purple) 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.6s ease-out;
+}
+
+.header .subtitle {
+    font-size: 1.1em;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-top: 10px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   FORMULARIO
+   ============================================ */
+
+.evaluation-form {
+    padding: 40px 30px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.05) 0%, rgba(196, 123, 255, 0.05) 100%);
+    border-radius: 15px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.form-section h2 {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ============================================
+   GRUPOS DE FORMULARIO
+   ============================================ */
+
+.form-group {
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 1em;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+    background-color: rgba(255, 107, 157, 0.02);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: var(--font-main);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   GRUPOS DE PREGUNTAS Y RADIO
+   ============================================ */
+
+.question-group {
+    margin-bottom: 25px;
+    padding: 18px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(77, 150, 255, 0.05) 100%);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 107, 157, 0.1);
+    transition: all 0.3s ease;
+}
+
+.question-group:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(107, 203, 119, 0.15);
+}
+
+.question-text {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.radio-label:hover {
+    background-color: rgba(255, 107, 157, 0.1);
+}
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.radio-label span {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* ============================================
+   CHECKBOX
+   ============================================ */
+
+.checkbox-group {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 217, 61, 0.1) 0%, rgba(108, 203, 119, 0.1) 100%);
+    border-radius: 12px;
+    border: 2px dashed var(--secondary-color);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.checkbox-label span {
+    color: var(--text-dark);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.08) 0%, rgba(196, 123, 255, 0.08) 100%);
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-purple) 100%);
+    color: white;
+    min-width: 200px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(-1px);
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--accent-color) 100%);
+    color: white;
+    min-width: 200px;
+}
+
+.btn-reset:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.btn-reset:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-blue) 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   DISEÑO RESPONSIVO
+   ============================================ */
+
+/* Tablets (768px y arriba) */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .evaluation-form {
+        padding: 25px 20px;
+    }
+
+    .form-section {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .form-section h2 {
+        font-size: 1.4em;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+
+    .radio-group {
+        flex-direction: column;
+    }
+}
+
+/* Móviles (576px y abajo) */
+@media (max-width: 576px) {
+    :root {
+        --font-size-base: 15px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+        word-wrap: break-word;
+    }
+
+    .header .subtitle {
+        font-size: 0.95em;
+    }
+
+    .evaluation-form {
+        padding: 20px 15px;
+    }
+
+    .form-section {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-left-width: 4px;
+    }
+
+    .form-section h2 {
+        font-size: 1.25em;
+        word-wrap: break-word;
+    }
+
+    .form-group label {
+        font-size: 0.95em;
+        margin-bottom: 6px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="date"],
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .question-group {
+        padding: 12px;
+        margin-bottom: 18px;
+    }
+
+    .question-text {
+        font-size: 0.95em;
+    }
+
+    .radio-label {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+
+    .radio-label input[type="radio"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        padding: 12px 30px;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 20px 15px;
+        font-size: 0.95em;
+    }
+}
+
+/* Móviles muy pequeños (< 360px) */
+@media (max-width: 360px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .form-section h2 {
+        font-size: 1.1em;
+    }
+
+    .question-text {
+        font-size: 0.9em;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+}
+
+/* ============================================
+   ACCESIBILIDAD Y TRANSICIONES
+   ============================================ */
+
+/* Prefiere movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Modo oscuro (si el navegador lo soporta) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d44 100%);
+    }
+
+    .container {
+        background-color: #2a2a2a;
+    }
+
+    :root {
+        --text-dark: #E0E0E0;
+        --text-light: #B0B0B0;
+        --background: #1a1a1a;
+        --border-color: #444444;
+    }
+
+    .form-section {
+        background: linear-gradient(135deg, rgba(255, 107, 157, 0.08) 0%, rgba(196, 123, 255, 0.08) 100%);
+    }
+
+    .question-group {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(77, 150, 255, 0.08) 100%);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background-color: #333333;
+        color: #E0E0E0;
+        border-color: #555555;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        background-color: rgba(255, 107, 157, 0.1);
+        border-color: var(--primary-color);
+    }
+}
+
+/* ============================================
+   EFECTOS ESPECIALES
+   ============================================ */
+
+/* Efecto de enfoque mejorado */
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cursor personalizado en botones */
+button {
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .btn-submit,
+    .btn-reset,
+    .form-actions {
+        display: none;
+    }
+
+    .header {
+        page-break-after: avoid;
+    }
+
+    .form-section {
+        page-break-inside: avoid;
+    }
+}
