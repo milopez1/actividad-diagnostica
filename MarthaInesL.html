@@ -13,7 +13,10 @@
             <p class="subtitle">Basado en el folleto "La Tradición de A.A. Cómo se desarrolló"</p>
         </header>
 
-        <form class="evaluation-form" id="evaluationForm">
+        <!-- Mensaje de estado -->
+        <div id="mensaje" class="mensaje-estado" style="display: none;"></div>
+
+        <form class="evaluation-form" id="evaluationForm" method="POST" action="procesar_formulario.php">
             
             <!-- Información del Participante -->
             <section class="form-section">
@@ -516,6 +519,12 @@
         <footer class="footer">
             <p>🕊️ "Que el espíritu de A.A. nos guíe siempre hacia la unidad, el servicio y el amor"</p>
         </footer>
+    </div>
+
+    <!-- Script para procesar el formulario -->
+    <script src="script.js"></script>
+</body>
+</html>
     </div>
 </body>
 </html>
